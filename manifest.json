@@ -1,0 +1,26 @@
+{
+    "name": "起点助手 ",
+    "description" : "起点中文网辅助，自动领取在线时长经验值奖励，QQ交流群：511101539",
+    "version": "1.6",
+    "manifest_version": 2,
+    "icons": { "16": "assets/img/qidian.png",
+      "48": "assets/img/qidian.png",
+     "128": "assets/img/qidian.png" },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/img/qidian.png"
+      },
+    "permissions": [
+        "webRequest",
+        "background",
+        "cookies",
+        "storage",
+        "tabs",
+        "http://*.qidian.com/*",
+        "https://*.qidian.com/*"
+     ],
+    "background": {
+       "scripts": ["assets/js/jquery.min.js", "assets/js/background.js"],
+       "persistent": true
+    }
+  }

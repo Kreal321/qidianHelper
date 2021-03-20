@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>起点在线时长领取</title>
+  <!-- Fonts and icons -->
+  <link href="assets/fonts/fonts.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/now-ui-dashboard.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body style="display: block; width: 580px; height: 600px;">
+  <div class="wrapper overflow-hidden">
+    <div class="main-panel ps">
+      <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+
+            <a class="navbar-brand" href="#">起点助手</a>
+          </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end show" id="navigation">
+
+
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="获取状态中..." disabled style="cursor:auto" id="msg">
+              </div>
+            </form>
+
+
+
+          </div>
+        </div>
+      </nav>
+      <div class="panel-header panel-header-sm">
+        <!-- <canvas id="bigDashboardChart"></canvas> -->
+
+
+      </div>
+
+      <div class="content">
+        <div class="row">
+          <div class="col-lg-4" style="height: 404px;">           
+            <div class="card card-chart">
+              <div class="card-header">
+                <h5 class="card-category" id="login">未登录</h5>
+                <h3 class="card-title" id="user-name">你好</h3>
+                <div class="dropdown">
+                  <button type="button" class="btn btn-round btn-icon dropdown-toggle btn-outline-default no-caret"
+                    data-toggle="dropdown">
+                    <i class="now-ui-icons loader_gear"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="" id="pg-login">刷新</a>
+                    <a class="dropdown-item" href="#" id="pg-stop">停止</a>
+                    <a class="dropdown-item" href="#" id="pg-resume">恢复</a>
+                    <a class="dropdown-item text-danger" href="#" id="pg-logout">退出登录</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-3">
+                      <ul class="nav nav-pills nav-pills-primary flex-column" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" href="#link4" role="tablist">
+                                  经验值
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#log" role="tablist">
+                                  运行记录
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#link6" role="tablist">
+                                  版本说明
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col-9">
+                      <div class="tab-content">
+                          <div class="tab-pane active" id="link4">
+                            <div class="chart-area">
+                              <div class="chartjs-size-monitor">
+                                <div class="chartjs-size-monitor-expand">
+                                  <div class=""></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink">
+                                  <div class=""></div>
+                                </div>
+                              </div>
+                              <canvas
+                                  id="Exp-chart"
+                                  width="380"
+                                  height="200"
+                                  class="chartjs-render-monitor"
+                                  style="display: block; width: 380px; height: 200px"
+                                ></canvas>
+                            </div>
+                            
+
+
+                          </div>
+                          <div class="tab-pane" id="log">
+                            <button class="btn position-absolute" id="btn-log" style="top: 80px; left: 160px; z-index: 99;">载入</button>
+                            <div class="alert alert-primary position-relative"  id="logMsg" style="height: 200px; width: 380px; overflow:auto; opacity:0.5">
+                            </div>
+                            
+                            
+
+                          </div>
+                          <div class="tab-pane" id="link6">
+                            用户及隐私协议：<br>
+                            1. 本插件仅获取起点中文网本地cookie，无任何云端存储操作<br>
+                            2. cookie有效时长为48小时，过期后须由用户自行重启插件<br>
+                            3. 请勿将此插件用于非法或商业用途<br>
+                            <br>
+                            下次更新内容：<br>
+                            每日23点30分自动投剩余推荐票，月票红包信息分享<br>
+                            <br>
+                            QQ交流群：511101539<br>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              
+            </div>
+            <div class="card-footer">
+              <div class="stats" id="refresh-status">
+                <a href="" style="color: #9a9a9a;"><i class="now-ui-icons arrows-1_refresh-69 spin"></i></a> 刷新中
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer position-fixed pb-1" style="bottom: 0px; right: 0px;">
+            <div class=" container-fluid ">
+              <div class="copyright" id="copyright">
+                Beta V1.6. <br> Coded by <a href="#">Kreal</a>.
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<!-- JS Files -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-notify.js"></script>
+
+<script src="assets/js/chartjs.min.js"></script>
+
+<script src="assets/js/now-ui-dashboard.min.js" type="text/javascript"></script>
+<script src="assets/js/popup.js"> </script>
+
+
+
+</html>
