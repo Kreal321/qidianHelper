@@ -1,5 +1,5 @@
 # 起点助手Chrome插件
-起点中文网在线时长经验值奖励自动领取，起点API
+起点中文网在线时长经验值奖励自动领取，起点小说API
 
 ## release
 Beta 1.6 https://github.com/creative-kz/qidianHelper/releases/tag/f6fc598
