@@ -1,6 +1,9 @@
 # qidianHelper
 起点在线时长自动领取
 
+## release
+Beta 1.6 https://github.com/creative-kz/qidianHelper/releases/tag/f6fc598
+
 ## 缘由
 个人比较喜欢在起点读书，但是推荐票需要经验值等级23级才能获得3张实在有点顶不住，查了一下只有网页版每天在线时长120个经验值领取比较靠谱，但是领取时间一共要185分钟，所以就查了一下代码做了一个自动领取经验值的Chrome插件。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210321065534470.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hhbmRzb21laG9uZXk=,size_16,color_FFFFFF,t_70)
