@@ -1,5 +1,5 @@
 # qidianHelper
-起点在线时长自动领取
+起点中文网在线时长经验值奖励自动领取，起点API
 
 ## release
 Beta 1.6 https://github.com/creative-kz/qidianHelper/releases/tag/f6fc598
