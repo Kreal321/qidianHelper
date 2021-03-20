@@ -1,4 +1,4 @@
-# qidianHelper
+# 起点助手
 起点中文网在线时长经验值奖励自动领取，起点API
 
 ## release
